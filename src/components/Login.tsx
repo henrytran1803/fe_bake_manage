@@ -19,7 +19,7 @@ export const Login: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className = "gb-gray-300">
       <h1>Login</h1>
       <input
         type="email"
@@ -38,3 +38,4 @@ export const Login: React.FC = () => {
     </div>
   );
 };
+

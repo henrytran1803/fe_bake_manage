@@ -1,0 +1,47 @@
+{
+    "categories": [
+      {
+        "id": 1,
+        "name": "Chocolate Cake",
+        "image": "https://www.cookingclassy.com/wp-content/uploads/2019/06/chocolate-cake-9.jpg",
+        "product_quantity": 150,
+        "isactive": true
+      },
+      {
+        "id": 2,
+        "name": "Strawberry Tart",
+        "image": "https://www.cookwithmanali.com/wp-content/uploads/2021/06/Strawberry-Tart-500x500.jpg",
+        "product_quantity": 120,
+        "isactive": true
+      },
+      {
+        "id": 3,
+        "name": "Vanilla Cupcake",
+        "image": "https://assets.epicurious.com/photos/57c5b69b84c001120f6164fc/5:4/w_2667,h_2134,c_limit/vanilla-cupcakes.jpg",
+        "product_quantity": 200,
+        "isactive": true
+    },
+      {
+        "id": 4,
+        "name": "Blueberry Muffin",
+        "image": "https://www.simplyrecipes.com/thmb/7rQck96KybsrbJq_TF5pDlbQNAE=/2000x1333/filters:fill(auto,1)/Simply-Recipes-Blueberry-Muffins-LEAD-3-04bfc8ec157c4de98d593cd1fb7455d0.jpg",
+        "product_quantity": 90,
+        "isactive": true
+      },
+      {
+        "id": 5,
+        "name": "Lemon Cheesecake",
+        "image": "https://www.onceuponachef.com/images/2021/04/Perfect-Cheesecake.jpg",
+        "product_quantity": 60,
+        "isactive": true
+    },
+      {
+        "id": 6,
+        "name": "Red Velvet Cake",
+        "image": "https://www.sugarspunrun.com/wp-content/uploads/2019/02/Red-Velvet-Cake-Recipe-1-of-1-9.jpg",
+        "product_quantity": 100,
+        "isactive": true
+      }
+    ]
+  }
+  
