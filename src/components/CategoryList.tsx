@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import ItemCategory from './ItemCategory';
-
+import ItemCategory from './CategoryItem/index';
+import CustomButton from './CustomButtonCategory';
+import { PlusIcon} from 'lucide-react';
+import DiscountCardProps from './DiscountCard/index';
+import {ItemCategoryProps} from './CategoryItem/types';
 interface Category {
     id: number;
     name: string;
@@ -9,8 +12,9 @@ interface Category {
     isactive: boolean;
 }
 
+    
 const CategoryList: React.FC = () => {
-    const [categories, setCategories] = useState<Category[]>([]); // Đặt kiểu cho state
+    const [categories, setItemCategoryProps] = useState<ItemCategoryProps[]>([]); // Đặt kiểu cho state
 
     useEffect(() => {
         const fetchCategories = async () => {
@@ -20,7 +24,7 @@ const CategoryList: React.FC = () => {
                     throw new Error('Failed to fetch categories');
                 }
                 const data = await response.json(); // Lấy dữ liệu
-                setCategories(data.categories); // Cập nhật state với data.categories
+                setItemCategoryProps(data.categories); // Cập nhật state với data.categories
             } catch (error) {
                 console.error(error);
             }
@@ -28,13 +32,18 @@ const CategoryList: React.FC = () => {
 
         fetchCategories();
     }, []);
-
+    const handleButtonClick = () => {
+        alert('Button clicked!');
+    };
     return (
         <div className="category-list flex flex-wrap justify-center gap-4 ">
+            <CustomButton onClick={handleButtonClick} className="text-blue-300 text-7xl font-bold ">
+                 +
+            </CustomButton>
+                <DiscountCardProps/>
             {categories.length > 0 ? (
                 categories.map((category) => (
                     <ItemCategory
-                        key={category.id} // Thêm key cho mỗi ItemCategory
                         name={category.name}
                         image={category.image}
                         product_quantity={category.product_quantity}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
-import Sidebar, { SidebarItem } from '../components/SideBar';
+import Sidebar, { SidebarItem } from '../components/SideBar/index';
 import { HomeIcon, BellIcon, BoxIcon, CirclePercentIcon, UserIcon, FactoryIcon, ShoppingCartIcon } from 'lucide-react';
 
 const HomePage: React.FC = () => {

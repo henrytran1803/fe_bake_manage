@@ -1,21 +1,17 @@
 import React, { useState } from 'react';
 import { Dot, LayoutGrid } from 'lucide-react';
+import { ItemCategoryProps } from './types';
 
-interface ItemCategoryProps {
-    name: string;
-    image: string;
-    product_quantity: number;
-    isactive: boolean;
-}
+
 
 const ItemCategory: React.FC<ItemCategoryProps> = ({ name, image, product_quantity, isactive }) => {
     const [imageLoaded, setImageLoaded] = useState(true); // State to track if the image is loaded
 
     return (
-        <div className={`flex flex-col items-start min-w-[150px] max-w-[250px] h-full rounded-[24px] bg-white overflow-hidden item-category ${isactive ? 'active' : 'inactive'}`}>
-            <div className="p-4">
-            <div className="item-category-header flex items-center space-x-2" >
-                <div className="flex items-center space-x-2">
+    <div className={`flex flex-col items-start min-w-[150px] p-6 max-w-[250px] h-full rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100  bg-white overflow-hidden item-category ${isactive ? 'active' : 'inactive'}`}>
+        <div className="p-4 pt-0">
+            <div className="item-category-header flex items-center gap-x-2" >
+                <div className="flex items-center space-x-2 mt-0">
                     <LayoutGrid className="w-5 h-5 text-gray-300" />
                     <span className="category-label text-gray-300">Category</span>
                 </div>
@@ -39,8 +35,8 @@ const ItemCategory: React.FC<ItemCategoryProps> = ({ name, image, product_quanti
                 <div className="bg-gray-300 min-w-[100px] max-w-[200px] min-h-[100px] max-h-[200px] rounded-lg animate-pulse item-center" />
             )}
             </div>
-            <div className="flex items-start p-3">
-                <p className="text-gray-300 product-quantity">{`+${product_quantity} products`}</p>
+            <div className="flex items-start p-3 pb-0">
+                <p className="text-gray-300 text-sm product-quantity">{`+${product_quantity} products`}</p>
             </div>
         </div>
     );

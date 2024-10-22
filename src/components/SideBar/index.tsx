@@ -1,11 +1,7 @@
 import { MoreVertical, ChevronLast, ChevronFirst } from "lucide-react"
 import { useContext, createContext, useState, ReactNode } from "react"
 import { useNavigate } from 'react-router-dom';
-
-interface SidebarContextType {
-  expanded: boolean;
-  setExpanded?: (value: boolean) => void;
-}
+import {SidebarContextType} from './types'
 
 const SidebarContext = createContext<SidebarContextType | undefined>(undefined);
 
