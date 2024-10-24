@@ -4,7 +4,7 @@ import Login from '../components/Login/index';
 import CategoryList from '../components/CategoryList';
 import AlertCustom from '../components/AlertCustom';
 import SearchBar from '../components/SearchBar';
-
+import UploadImage from '../components/UploadImage';
 const LoginPage: React.FC = () => {
   const handleLogin = (username: string, password: string) => {
     // Xử lý logic đăng nhập ở đây
@@ -13,7 +13,9 @@ const LoginPage: React.FC = () => {
   const handleEdit = (): void => {
     console.log('Edit clicked');
   };
-
+  const uploadImage = (): void => {
+    console.log('Edit clicked');
+  };
   const handleDelete = (): void => {
     console.log('Delete clicked');
   };
@@ -37,6 +39,7 @@ const LoginPage: React.FC = () => {
       onEdit={handleEdit}
       onDelete={handleDelete}
     />
+    <UploadImage onClick={uploadImage}/>
         <SearchBar
       onSearch={handleSearch}
       onSort={handleSort}
